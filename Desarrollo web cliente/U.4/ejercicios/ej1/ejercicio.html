@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<!--1. Crea una página HTML que tenga una variable JavaScript frutas que sea un array con los
+valores ("limon","pera","melon","sandia"), y además que haga lo siguiente:-->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+    
+
+    <script>
+        let frutas = ["limon","pera","melon","sandia"];
+
+        //1. Muestre el último elemento utilizando la propiedad length.
+        p.innerHTML = frutas[frutas.length-1] + "<br>";
+
+        //2. Cree un nuevo elemento al final del array con el valor “cereza”, utilizando la propiedad length. Muestra su valor
+        frutas[frutas.length] = "cereza";
+        p.innerHTML += frutas[frutas.length-1] + "<br>";
+
+        //3. Crea otro nuevo elemento al final del array con el valor “uva”, utilizando el método push. Muestra su valor.
+        frutas.push("uva"); //lo añade al final
+        p.innerHTML += frutas[frutas.length-1] + "<br>";
+
+        //4. Muestre si frutas es un array o no (utiliza el método isArray()).
+        if(Array.isArray(frutas)){
+            p.innerHTML += "El elemento frutas es de tipo array<br>";
+        }else{
+            p.innerHTML += "El elemento frutas no es de tipo array<br>";
+        }
+
+        //5. Que muestre el contenido de todo el array con el método toString().
+        let cadenaFrutas = frutas.toString(); // es lo mismo que poner frutas
+        p.innerHTML += "Contenido del array frutas: " + cadenaFrutas + "<br>";
+
+        //6. Que muestre el contenido de todo el array separando los valores por // con el método join().
+        p.innerHTML += "Contenido del array separado por \"//\": "  + frutas.join('//') + "<br>";
+        
+
+        //7. Elimina el último elemento con el método pop(). Muestra el contenido de todo el array. Muestra la longitud actual del array.
+        p.innerHTML += "\//Eliminar ultimo elemento\//<br>";
+        frutas.pop();
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+        
+
+        //8. Elimina el primer elemento con el método shift(). Muestra el contenido de todo el array. Muestra la longitud actual del array.
+        p.innerHTML += "\//Eliminar primer elemento\//<br>";
+        frutas.shift();
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+
+        //9. Añade como primer elemento el valor aguacate con el método unshift(). Muestra el contenido de todo el array. Muestra la longitud actual del array.
+        p.innerHTML += "\//Añadir aguacate\//<br>";
+        frutas.unshift("aguacate");
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+
+        //10. Borra el tercer elemento con el operador delete. Muestra el contenido de todo el array. Muestra la longitud actual del array.
+        p.innerHTML += "\//Eliminar tercer elemento\//<br>";
+        delete frutas[2]; //deja el espacio vacío
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+
+        //11. Pon de nuevo el valor melon en el tercer elemento. Muestra el contenido de todo el array. Muestra la longitud actual del array.
+        p.innerHTML += "\//Añadir el valor melon en tercer elemento\//<br>";
+        frutas[2]="melon";
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+        
+        //12. Borra el segundo elemento con el método splice. Muestra el contenido de todo el array. Muestra la longitud actual del array.
+        p.innerHTML += "\//Borrar segundo elemento\//<br>";
+        frutas.splice(1,1);
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+        
+        //13. Añade en la posición 2 y 3, los valores “piña” y “manzana” utilizando el método splice. Muestra el contenido de todo el array. Muestra la longitud actual del array.
+        p.innerHTML += "\//Añadir elementos piña y manzana\//<br>";
+        frutas.splice(1,0,"piña","manzana");
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+
+        //14. Reemplaza los valores de las posiciones 3 y 4 por “platano” y “naranja” utilizando el método splice. Muestra el contenido de todo el array. Muestra la longitud actual del array.
+        p.innerHTML += "\//Reemplazar valores posición 3 y 4\//<br>"; //la posición 3 es el 4 elemento del array
+        frutas.splice(2,2,"platano","naranja");
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+        
+        //15. Reemplaza los valores de las posiciones 0 y 1 por “mandarina” y “kiwi”, y además, añade “caqui” utilizando el método splice. Muestra el contenido de todo el array. Muestra la longitud actual del array.
+        p.innerHTML += "\//Reemplazar valores posiciones 0 y 1\//<br>";
+        frutas.splice(0,2,"mandarina","kiwi");
+        frutas.splice(2,0,"caqui");
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+
+
+        //16. Crea un segundo array de frutas con los valores “melocotón” y “fresa”. Concatena los arrays frutas y frutas2, y guarda el array resultante en frutasTotal, utilizando el método concat(). Muestra el contenido del array frutasTotal. Muestra la longitud también.
+        p.innerHTML += "\//Creación de segundo array y concatenación de ambos\//<br>";
+        frutas2 = ["melocotón","fresa"];
+        frutasTotal = frutas.concat(frutas2); //se concatena al original el segundo array
+        p.innerHTML += "Contenido del array frutasTotal: " + frutasTotal + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutasTotal.length + "<br>";
+
+
+        //17. Guarda en otro array llamado resultadoArray, los elementos desde la posición 2 a 6 del array frutas utilizando el método slice(). Muestra el contenido del array frutas, del array resultadoArray. Muestra la longitud también de ambos.
+        p.innerHTML += "\//Guardar en otro array los elementos de la posicion 2 y 6 de frutas\//<br>";
+        resultadoArray = frutas.slice(1,6); // la posicion 2 del array es el 3º elemento
+        p.innerHTML += "Contenido del array resultadoArray: " + resultadoArray + "<br>";
+        p.innerHTML += "Longitud array frutas: " + frutas.length + "<br>";
+        p.innerHTML += "Longitud array resultadoArray: " + resultadoArray.length + "<br>";
+
+        //18. Ordena alfabéticamente el array frutas con el método sort(). Muestra el contenido del array frutas después de ordenarlo y también la longitud.
+        p.innerHTML += "\//Ordenacion alfabéticamente array frutas\//<br>";
+        frutas.sort();
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+
+
+        //19. Invierta el orden del array frutas con el método reverse(). Muestra el contenido del array frutas después de invertirlo y también la longitud.
+        p.innerHTML += "\//Invertir orden del array frutas\//<br>";
+        frutas.reverse();
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+        p.innerHTML += "Longitud actual del array: " + frutas.length + "<br>";
+        
+        //20. Añade al final del array un elemento nuevo llamado “naranja”, aunque esté repetido.
+        p.innerHTML += "\//Añadir elemento naranja al final\//<br>";
+        frutas.splice(frutas.length, 0, "naranja"); // o con push(), es más sencillo
+        p.innerHTML += "Contenido del array frutas: " + frutas + "<br>";
+
+        //21. Averigua en qué posición está el elemento “naranja” comenzando desde la primera posición con el método indexOf(). Muestra esta posición, el elemento que hay en esta posición y muestra el contenido del array frutas.
+        p.innerHTML += "\//Posición del elemento naranja\//<br>";
+        let posicion = frutas.indexOf("naranja"); //te busca desde el principio
+        p.innerHTML += "El elemento de la posición " + posicion + " es " + frutas[posicion] +"<br>";
+
+        
+        //22. Averigua en qué posición está el elemento “naranja” a partir de la posición 4. Muestra esta posición, el elemento que hay en esta posición y muestra el contenido del array frutas.
+        let posicion2 = frutas.indexOf("naranja",4);
+        p.innerHTML += "El elemento de la posición " + posicion2 + " es " + frutas[posicion2] +"<br>";
+
+        //23. Averigua en qué posición está el elemento “naranja” comenzando desde la última posición con el método lastIndexOf(). Muestra esta posición, el elemento que hay en esta posición y muestra el contenido del array frutas.
+        let posicion3 = frutas.lastIndexOf("naranja"); //te busca desde el final
+        p.innerHTML += "El elemento de la posición " + posicion3 + " es " + frutas[posicion3] +"<br>";
+
+        //24. Averigua si está o no el elemento “higo” en el array frutas. Muestra el resultado de esta búsqueda
+        p.innerHTML += "\//Averiguar si está el elemento higo\//<br>";
+        let comprobar = frutas.indexOf("higo"); // también fruta.includes("higo")
+
+        if(comprobar == -1){
+            p.innerHTML += "El elemento higo no existe en el array"; 
+        }else{
+            p.innerHTML += "El elemento higo existe en el array";
+        }
+
+
+    </script>
+
+</body>
+</html>

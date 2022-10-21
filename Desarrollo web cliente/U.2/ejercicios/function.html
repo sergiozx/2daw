@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es­ES">
+<head>
+    <meta charset="UTF­8">
+    <title>Saludo</title>
+</head>
+<body>
+    
+    
+
+    <p id="demo">Hola 2DAWA</p>
+
+    <script>
+
+    function suma (a,b){
+        return a+b;
+    }
+
+    let x
+    x = suma(3,4);
+
+    document.getElementById("demo").innerHTML = typeof suma;
+    document.getElementById("demo").innerHTML += " " + x;
+
+    suma = function (a,b) { return a-b; } //cambio la funcion de sumar a restar
+    document.getElementById("demo").innerHTML += suma;
+
+    document.getElementById("demo").innerHTML = ("3" !== 4) + "||" + ("3" ===3);
+    
+
+    </script>
+
+
+</body>
+</html>

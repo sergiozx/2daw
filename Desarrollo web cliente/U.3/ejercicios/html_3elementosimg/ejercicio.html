@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<!--Crea un documento HTML con 3 imágenes. Desde Javascript y a través de la propiedad
+document.images[] cambia el borde de todas las imágenes, asignando a la propiedad border de cada
+imagen el valor 8-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="sonrisa.jpg">
+    <img src="sonrisa.jpg">
+    <img src="sonrisa.jpg">
+
+    <script>
+        
+        for(let i=0; i<document.images.length; i++){ //es una colección de imágenes con las propiedades de estas
+            document.images[i].border = 8;
+        }
+
+    </script>
+
+
+</body>
+</html>

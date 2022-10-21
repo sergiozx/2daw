@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+     
+    var o1=new Number(3);
+    var d1=new Date();
+
+    function fNum(obj){
+    obj=4;
+    document.write("Dentro de funcion: ",obj,"<br>");
+    }
+
+    function fFecha(obj){
+    obj.setDate(obj.getDate()-5);
+    document.write("Dentro de funcion: ",obj.getDate(),"<br>");
+    }
+
+    document.write("<br>Funcionamiento de una funcion con parámetro un objeto Number<br>");
+    document.write("Fuera de funcion antes de llamarla: ",o1,"<br>");
+    fNum(o1);
+    document.write("Fuera de funcion despues de llamarla: ",o1,"<br>");
+    
+    document.write("<br>Funcionamiento de una funcion con parámetro un objeto date<br>");
+    document.write("Fuera de funcion antes de llamarla: ",d1.getDate(),"<br>");
+    fFecha(d1);
+    document.write("Fuera de funcion despues de llamarla: ",d1.getDate(),"<br>");
+        
+    </script>
+    
+</body>
+</html>

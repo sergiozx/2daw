@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--Recorre el array sistema solar de los apuntes y para cada planeta saca una frase-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+
+    <script>
+        sistemaSolar = new Array("Mercurio", "Venus", "Tierra", "Marte", "Júpiter", "Saturno", "Urano", "Nepturno");
+
+        function f1(item, index){
+            p.innerHTML += "El planeta " + item + " está en la posición " + index + " del array" + "<br>";
+        } 
+
+        sistemaSolar.forEach(f1);
+
+    </script>
+</body>
+</html>

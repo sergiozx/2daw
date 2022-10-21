@@ -1,0 +1,20 @@
+Comandos git desde la carpeta del repo:
+
+1. git add .    //añadir a zona stage
+2. git commit  o   git commit -m "Añado mensaje con los cambios" //pasar a la rama principal
+3. git push     //lo pasamos a github
+
+
+4. git pull     //traerlo de github
+
+
+
+
+Para clonar repositorio:
+
+git clone http://...
+
+
+token: 
+
+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

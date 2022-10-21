@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="p"></p>
+
+    <script>
+        var profesores = ["Cristina","Catalina","Vieites","Benjamin"];
+        var sexoProfesores = ["M","M","H","H"];
+        var asignaturas=["Seguridad","Bases de Datos","Sistemas Informáticos","Redes"];
+        var alumnos=[24,17,28,26];
+
+        for(let index=0; index < profesores.length; index++){
+
+            if(sexoProfesores[index] == 'H'){
+
+                p.innerHTML += "El profesor " + profesores[index] + " imparte el módulo " + asignaturas[index] +
+                " que tiene " + alumnos[index] + " matriculados<br>";
+
+            }else{
+
+                p.innerHTML += "La profesora " + profesores[index] + " imparte el módulo " + asignaturas[index] +
+                " que tiene " + alumnos[index] + " matriculados<br>";
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
